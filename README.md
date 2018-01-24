@@ -31,7 +31,7 @@ No negative prices or amounts of material
 The price is for the entire amount of material, not per 1 material
 Each company only requests one amount for one price
 Array is sorted low to high by amount (low to high by price if amount is the same)
-Two different companies CAN request the same amount/price
+The amounts for the companies will not always be sequential (could be 1, 5, 6, 16,...)
 
 Approach: This is an application of the knapsack problem (as described in my algorithms class). This can be performed using dynamic programming or a greedy algorithm. Since each company can only make one request, this is a 0-1 knapsack problem. I will be using dynamic programming since it is guaranteed to be optimal (although at the cost of time/processing power)
 
