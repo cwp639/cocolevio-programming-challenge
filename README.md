@@ -1,23 +1,40 @@
 # cocolevio-programming-challenge
 
-At Cocolevio we believe there is an inextricable link between our innovative technology solutions and the coding essential to make those solutions a reality. Our clients and customers are excited when we present them with ideas that will help them leverage modern technologies, but they aren’t satisfied until we deliver on those ideas.
-
-For that reason we ask our engineering candidates to perform a small programming challenge which we will evaluate during the interview. There is no right answer to this challenge--what we are looking to understand is your thought process as you go about solving the problem using code.
-
-To this end we won't be using this as a means to assess your knowledge of frameworks or platforms, but we will be assessing your problem-solving ability and your ability to create a solution which is clear to understand, easy to maintain, and crafted with love.
-
-The following are core requirements:
-  1. You should complete this to your best of your ability before the interview, you will be given no less than 3 days.
-  2. You should publish all of your work on a public github repository and share the url with you.
-  3. You should check into the git repository frequently as you go about solving this problem. We are loooking at how you form your solution and the commit history is key to us understanding that.
-  4. If for any reason we suspect this is not your work, you will be instantly disqualified from the process without explanation. For this reason please cite referneces you used, and as mentioned before, your commit history and ability to talk to it is key.
-   
-Please have fun doing this and use it as an opportunity to show us what you can do.
-
-Now, the challenge:
+The challenge:
 
 In our Materials Marketplace we have many different companies all looking for the same material. However, each company is looking for a specific quantity of the material at a price they set themselves. A company approaches our team with a large amount of that material, but not enough to complete every request for it. Given the total amount of the material they have, the company asks us to find out what companies they should sell to in order to maximize their profits. This scenario happens frequently so we need to be able to compute the answer relatively quickly and with minimal processing power.
 
 Please use the following as sample data:
 
 https://s3.amazonaws.com/cocolevio-public/InterviewQuestionExample.PNG
+
+The data (from the link above):
+Company	Amount	Price
+A		1		1
+B		2		5
+C		3		8
+D		4		9
+E		5		10
+F		6		17
+G		7		17
+H		8		20
+I		9		24
+J		10		30
+
+Each company is requesting an amount of material for a specific price.
+
+Task: Given the data above and N, the amount of material available for sale, how do we distribute the material to the companies to maximize profit
+
+Assumptions: 
+N is always less than the total amount of requested material
+No negative prices or amounts of material
+The price is for the entire amount of material, not per 1 material
+Each company only requests one amount for one price
+Array is sorted low to high by amount (low to high by price if amount is the same)
+Two different companies CAN request the same amount/price
+
+Approach: This is an application of the knapsack problem (as described in my algorithms class). This can be performed using dynamic programming or a greedy algorithm. Since each company can only make one request, this is a 0-1 knapsack problem. I will be using dynamic programming since it is guaranteed to be optimal (although at the cost of time/processing power)
+
+Resources used: https://en.wikipedia.org/wiki/Knapsack_problem
+
+
