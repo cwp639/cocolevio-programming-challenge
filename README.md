@@ -10,16 +10,27 @@ https://s3.amazonaws.com/cocolevio-public/InterviewQuestionExample.PNG
 
 The data (from the link above):
 Company	Amount	Price
+
 A		1		1
+
 B		2		5
+
 C		3		8
+
 D		4		9
+
 E		5		10
+
 F		6		17
+
 G		7		17
+
 H		8		20
+
 I		9		24
-J		10		30
+
+J		10	30
+
 
 Each company is requesting an amount of material for a specific price.
 
